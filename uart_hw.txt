@@ -1,0 +1,11 @@
+
+Dhrystone Benchmark, Version 2.1 (Language: C)
+
+Execution starts, 1000 runs through Dhrystone
+Frequency    : 100MHz
+No of clocks : 339211 
+Dhry per sec : 294811 
+DMIPS        : 167 
+
+End of Program
+
