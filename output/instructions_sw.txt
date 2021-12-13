@@ -1,0 +1,430 @@
+00000200 : 00031197  AUIPC  rd = 3, imm = 0x31
+00000204 : c3818193  ADDI   rd = 3, rs1 = 3, imm = 0xc38
+00000208 : 81018513  ADDI   rd = 10, rs1 = 3, imm = 0x810
+0000020c : 83818613  ADDI   rd = 12, rs1 = 3, imm = 0x838
+00000210 : 40a60633  SUB    rd = 12, rs1 = 12, rs2 =10
+00000214 : 00000593  ADDI   rd = 11, rs1 = 0, imm = 0x0
+00000218 : 378000ef  JAL    rd = 1, imm = 0x378
+00000590 : 00f00313  ADDI   rd = 6, rs1 = 0, imm = 0xf
+00000594 : 00050713  ADDI   rd = 14, rs1 = 10, imm = 0x0
+00000598 : 02c37e63  BGEU   rs1 = 6, rs2 = 12, imm = 0x3c
+0000059c : 00f77793  ANDI   rd = 15, rs1 = 14, imm = 0xf
+000005a0 : 0a079063  BNE    rs1 = 15, rs2 = 0, imm = 0xa0
+00000640 : 00279693  SLLI   rd = 13, rs1 = 15, shamt =2
+00000644 : 00000297  AUIPC  rd = 5, imm = 0x0
+00000648 : 005686b3  ADD    rd = 13, rs1 = 13, rs2 =5
+0000064c : 00008293  ADDI   rd = 5, rs1 = 1, imm = 0x0
+00000650 : fa0680e7  JALR   rd = 1, rs1 = 13, imm = 0xfa0
+00000604 : 00b703a3  SB     rs1 = 14, rs2 = 11, imm = 0x7
+00000608 : 00b70323  SB     rs1 = 14, rs2 = 11, imm = 0x6
+0000060c : 00b702a3  SB     rs1 = 14, rs2 = 11, imm = 0x5
+00000610 : 00b70223  SB     rs1 = 14, rs2 = 11, imm = 0x4
+00000614 : 00b701a3  SB     rs1 = 14, rs2 = 11, imm = 0x3
+00000618 : 00b70123  SB     rs1 = 14, rs2 = 11, imm = 0x2
+0000061c : 00b700a3  SB     rs1 = 14, rs2 = 11, imm = 0x1
+00000620 : 00b70023  SB     rs1 = 14, rs2 = 11, imm = 0x0
+00000624 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000654 : 00028093  ADDI   rd = 1, rs1 = 5, imm = 0x0
+00000658 : ff078793  ADDI   rd = 15, rs1 = 15, imm = 0xff0
+0000065c : 40f70733  SUB    rd = 14, rs1 = 14, rs2 =15
+00000660 : 00f60633  ADD    rd = 12, rs1 = 12, rs2 =15
+00000664 : f6c378e3  BGEU   rs1 = 6, rs2 = 12, imm = 0x1f70
+00000668 : f3dff06f  JAL    rd = 32, imm = 0x1fff3c
+000005a4 : 08059263  BNE    rs1 = 11, rs2 = 0, imm = 0x84
+000005a8 : ff067693  ANDI   rd = 13, rs1 = 12, imm = 0xff0
+000005ac : 00f67613  ANDI   rd = 12, rs1 = 12, imm = 0xf
+000005b0 : 00e686b3  ADD    rd = 13, rs1 = 13, rs2 =14
+000005b4 : 00b72023  SW     rs1 = 14, rs2 = 11, imm = 0x0
+000005b8 : 00b72223  SW     rs1 = 14, rs2 = 11, imm = 0x4
+000005bc : 00b72423  SW     rs1 = 14, rs2 = 11, imm = 0x8
+000005c0 : 00b72623  SW     rs1 = 14, rs2 = 11, imm = 0xc
+000005c4 : 01070713  ADDI   rd = 14, rs1 = 14, imm = 0x10
+000005c8 : fed766e3  BLTU   rs1 = 14, rs2 = 13, imm = 0x1fec
+000005b4 : 00b72023  SW     rs1 = 14, rs2 = 11, imm = 0x0
+000005b8 : 00b72223  SW     rs1 = 14, rs2 = 11, imm = 0x4
+000005bc : 00b72423  SW     rs1 = 14, rs2 = 11, imm = 0x8
+000005c0 : 00b72623  SW     rs1 = 14, rs2 = 11, imm = 0xc
+000005c4 : 01070713  ADDI   rd = 14, rs1 = 14, imm = 0x10
+000005c8 : fed766e3  BLTU   rs1 = 14, rs2 = 13, imm = 0x1fec
+000005cc : 00061463  BNE    rs1 = 12, rs2 = 0, imm = 0x8
+000005d0 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+0000021c : 00000517  AUIPC  rd = 10, imm = 0x0
+00000220 : 57450513  ADDI   rd = 10, rs1 = 10, imm = 0x574
+00000224 : 00050863  BEQ    rs1 = 10, rs2 = 0, imm = 0x10
+00000228 : 00000517  AUIPC  rd = 10, imm = 0x0
+0000022c : 57c50513  ADDI   rd = 10, rs1 = 10, imm = 0x57c
+00000230 : 560000ef  JAL    rd = 1, imm = 0x560
+00000790 : 00050593  ADDI   rd = 11, rs1 = 10, imm = 0x0
+00000794 : 00000693  ADDI   rd = 13, rs1 = 0, imm = 0x0
+00000798 : 00000613  ADDI   rd = 12, rs1 = 0, imm = 0x0
+0000079c : 00000513  ADDI   rd = 10, rs1 = 0, imm = 0x0
+000007a0 : 0600006f  JAL    rd = 32, imm = 0x60
+00000800 : 000307b7  LUI    rd = 15, imm = 0x30
+00000804 : 6387a703  LW     rd = 14, rs1 = 15, imm = 0x638
+00000808 : 14872783  LW     rd = 15, rs1 = 14, imm = 0x148
+0000080c : 04078c63  BEQ    rs1 = 15, rs2 = 0, imm = 0x58
+00000864 : 14c70793  ADDI   rd = 15, rs1 = 14, imm = 0x14c
+00000868 : 14f72423  SW     rs1 = 14, rs2 = 15, imm = 0x148
+0000086c : fa5ff06f  JAL    rd = 32, imm = 0x1fffa4
+00000810 : 0047a703  LW     rd = 14, rs1 = 15, imm = 0x4
+00000814 : 01f00813  ADDI   rd = 16, rs1 = 0, imm = 0x1f
+00000818 : 06e84e63  BLT    rs1 = 16, rs2 = 14, imm = 0x7c
+0000081c : 00271813  SLLI   rd = 16, rs1 = 14, shamt =2
+00000820 : 02050663  BEQ    rs1 = 10, rs2 = 0, imm = 0x2c
+0000084c : 00170713  ADDI   rd = 14, rs1 = 14, imm = 0x1
+00000850 : 00e7a223  SW     rs1 = 15, rs2 = 14, imm = 0x4
+00000854 : 010787b3  ADD    rd = 15, rs1 = 15, rs2 =16
+00000858 : 00b7a423  SW     rs1 = 15, rs2 = 11, imm = 0x8
+0000085c : 00000513  ADDI   rd = 10, rs1 = 0, imm = 0x0
+00000860 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000234 : 2c0000ef  JAL    rd = 1, imm = 0x2c0
+000004f4 : ff010113  ADDI   rd = 2, rs1 = 2, imm = 0xff0
+000004f8 : 00812423  SW     rs1 = 2, rs2 = 8, imm = 0x8
+000004fc : 01212023  SW     rs1 = 2, rs2 = 18, imm = 0x0
+00000500 : 00000437  LUI    rd = 8, imm = 0x0
+00000504 : 00000937  LUI    rd = 18, imm = 0x0
+00000508 : 00040793  ADDI   rd = 15, rs1 = 8, imm = 0x0
+0000050c : 00090913  ADDI   rd = 18, rs1 = 18, imm = 0x0
+00000510 : 40f90933  SUB    rd = 18, rs1 = 18, rs2 =15
+00000514 : 00112623  SW     rs1 = 2, rs2 = 1, imm = 0xc
+00000518 : 00912223  SW     rs1 = 2, rs2 = 9, imm = 0x4
+0000051c : 40295913  SRAI   rd = 18, rs1 = 18, shamt =2
+00000520 : 02090063  BEQ    rs1 = 18, rs2 = 0, imm = 0x20
+00000540 : 00000437  LUI    rd = 8, imm = 0x0
+00000544 : 00000937  LUI    rd = 18, imm = 0x0
+00000548 : 00040793  ADDI   rd = 15, rs1 = 8, imm = 0x0
+0000054c : 00090913  ADDI   rd = 18, rs1 = 18, imm = 0x0
+00000550 : 40f90933  SUB    rd = 18, rs1 = 18, rs2 =15
+00000554 : 40295913  SRAI   rd = 18, rs1 = 18, shamt =2
+00000558 : 02090063  BEQ    rs1 = 18, rs2 = 0, imm = 0x20
+00000578 : 00c12083  LW     rd = 1, rs1 = 2, imm = 0xc
+0000057c : 00812403  LW     rd = 8, rs1 = 2, imm = 0x8
+00000580 : 00412483  LW     rd = 9, rs1 = 2, imm = 0x4
+00000584 : 00012903  LW     rd = 18, rs1 = 2, imm = 0x0
+00000588 : 01010113  ADDI   rd = 2, rs1 = 2, imm = 0x10
+0000058c : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000238 : 00012503  LW     rd = 10, rs1 = 2, imm = 0x0
+0000023c : 00410593  ADDI   rd = 11, rs1 = 2, imm = 0x4
+00000240 : 00000613  ADDI   rd = 12, rs1 = 0, imm = 0x0
+00000244 : 6a4000ef  JAL    rd = 1, imm = 0x6a4
+000008e8 : ff010113  ADDI   rd = 2, rs1 = 2, imm = 0xff0
+000008ec : 00000517  AUIPC  rd = 10, imm = 0x0
+000008f0 : 04450513  ADDI   rd = 10, rs1 = 10, imm = 0x44
+000008f4 : 00112623  SW     rs1 = 2, rs2 = 1, imm = 0xc
+000008f8 : 9cdff0ef  JAL    rd = 1, imm = 0x1ff9cc
+000002c4 : f3010113  ADDI   rd = 2, rs1 = 2, imm = 0xf30
+000002c8 : 0b312023  SW     rs1 = 2, rs2 = 19, imm = 0xa0
+000002cc : 0a812623  SW     rs1 = 2, rs2 = 8, imm = 0xac
+000002d0 : 0a912423  SW     rs1 = 2, rs2 = 9, imm = 0xa8
+000002d4 : 0b212223  SW     rs1 = 2, rs2 = 18, imm = 0xa4
+000002d8 : 09412e23  SW     rs1 = 2, rs2 = 20, imm = 0x9c
+000002dc : 09512c23  SW     rs1 = 2, rs2 = 21, imm = 0x98
+000002e0 : 0ab12a23  SW     rs1 = 2, rs2 = 11, imm = 0xb4
+000002e4 : 0ac12c23  SW     rs1 = 2, rs2 = 12, imm = 0xb8
+000002e8 : 0ad12e23  SW     rs1 = 2, rs2 = 13, imm = 0xbc
+000002ec : 0ce12023  SW     rs1 = 2, rs2 = 14, imm = 0xc0
+000002f0 : 0cf12223  SW     rs1 = 2, rs2 = 15, imm = 0xc4
+000002f4 : 0d012423  SW     rs1 = 2, rs2 = 16, imm = 0xc8
+000002f8 : 0d112623  SW     rs1 = 2, rs2 = 17, imm = 0xcc
+000002fc : 00054783  LBU    rd = 15, rs1 = 10, imm = 0x0
+00000300 : 0b410993  ADDI   rd = 19, rs1 = 2, imm = 0xb4
+00000304 : 01312623  SW     rs1 = 2, rs2 = 19, imm = 0xc
+00000308 : 08078863  BEQ    rs1 = 15, rs2 = 0, imm = 0x90
+0000030c : 40000fb7  LUI    rd = 31, imm = 0x40000
+00000310 : 8081a583  LW     rd = 11, rs1 = 3, imm = 0x808
+00000314 : 02500e13  ADDI   rd = 28, rs1 = 0, imm = 0x25
+00000318 : 00a00813  ADDI   rd = 16, rs1 = 0, imm = 0xa
+0000031c : 00d00393  ADDI   rd = 7, rs1 = 0, imm = 0xd
+00000320 : 06300f13  ADDI   rd = 30, rs1 = 0, imm = 0x63
+00000324 : 07300293  ADDI   rd = 5, rs1 = 0, imm = 0x73
+00000328 : 07800413  ADDI   rd = 8, rs1 = 0, imm = 0x78
+0000032c : 03000493  ADDI   rd = 9, rs1 = 0, imm = 0x30
+00000330 : 01010313  ADDI   rd = 6, rs1 = 2, imm = 0x10
+00000334 : 02d00913  ADDI   rd = 18, rs1 = 0, imm = 0x2d
+00000338 : ffff8f93  ADDI   rd = 31, rs1 = 31, imm = 0xfff
+0000033c : 00900e93  ADDI   rd = 29, rs1 = 0, imm = 0x9
+00000340 : 0200006f  JAL    rd = 32, imm = 0x20
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+000003bc : 0075a023  SW     rs1 = 11, rs2 = 7, imm = 0x0
+000003c0 : 00054703  LBU    rd = 14, rs1 = 10, imm = 0x0
+000003c4 : 00068793  ADDI   rd = 15, rs1 = 13, imm = 0x0
+000003c8 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+000003cc : 00e5a023  SW     rs1 = 11, rs2 = 14, imm = 0x0
+000003d0 : 00078513  ADDI   rd = 10, rs1 = 15, imm = 0x0
+000003d4 : f85ff06f  JAL    rd = 32, imm = 0x1fff84
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000398 : 0ac12403  LW     rd = 8, rs1 = 2, imm = 0xac
+0000039c : 0a812483  LW     rd = 9, rs1 = 2, imm = 0xa8
+000003a0 : 0a412903  LW     rd = 18, rs1 = 2, imm = 0xa4
+000003a4 : 0a012983  LW     rd = 19, rs1 = 2, imm = 0xa0
+000003a8 : 09c12a03  LW     rd = 20, rs1 = 2, imm = 0x9c
+000003ac : 09812a83  LW     rd = 21, rs1 = 2, imm = 0x98
+000003b0 : 00100513  ADDI   rd = 10, rs1 = 0, imm = 0x1
+000003b4 : 0d010113  ADDI   rd = 2, rs1 = 2, imm = 0xd0
+000003b8 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+000008fc : 00000517  AUIPC  rd = 10, imm = 0x0
+00000900 : 03450513  ADDI   rd = 10, rs1 = 10, imm = 0x34
+00000904 : 9c1ff0ef  JAL    rd = 1, imm = 0x1ff9c0
+000002c4 : f3010113  ADDI   rd = 2, rs1 = 2, imm = 0xf30
+000002c8 : 0b312023  SW     rs1 = 2, rs2 = 19, imm = 0xa0
+000002cc : 0a812623  SW     rs1 = 2, rs2 = 8, imm = 0xac
+000002d0 : 0a912423  SW     rs1 = 2, rs2 = 9, imm = 0xa8
+000002d4 : 0b212223  SW     rs1 = 2, rs2 = 18, imm = 0xa4
+000002d8 : 09412e23  SW     rs1 = 2, rs2 = 20, imm = 0x9c
+000002dc : 09512c23  SW     rs1 = 2, rs2 = 21, imm = 0x98
+000002e0 : 0ab12a23  SW     rs1 = 2, rs2 = 11, imm = 0xb4
+000002e4 : 0ac12c23  SW     rs1 = 2, rs2 = 12, imm = 0xb8
+000002e8 : 0ad12e23  SW     rs1 = 2, rs2 = 13, imm = 0xbc
+000002ec : 0ce12023  SW     rs1 = 2, rs2 = 14, imm = 0xc0
+000002f0 : 0cf12223  SW     rs1 = 2, rs2 = 15, imm = 0xc4
+000002f4 : 0d012423  SW     rs1 = 2, rs2 = 16, imm = 0xc8
+000002f8 : 0d112623  SW     rs1 = 2, rs2 = 17, imm = 0xcc
+000002fc : 00054783  LBU    rd = 15, rs1 = 10, imm = 0x0
+00000300 : 0b410993  ADDI   rd = 19, rs1 = 2, imm = 0xb4
+00000304 : 01312623  SW     rs1 = 2, rs2 = 19, imm = 0xc
+00000308 : 08078863  BEQ    rs1 = 15, rs2 = 0, imm = 0x90
+0000030c : 40000fb7  LUI    rd = 31, imm = 0x40000
+00000310 : 8081a583  LW     rd = 11, rs1 = 3, imm = 0x808
+00000314 : 02500e13  ADDI   rd = 28, rs1 = 0, imm = 0x25
+00000318 : 00a00813  ADDI   rd = 16, rs1 = 0, imm = 0xa
+0000031c : 00d00393  ADDI   rd = 7, rs1 = 0, imm = 0xd
+00000320 : 06300f13  ADDI   rd = 30, rs1 = 0, imm = 0x63
+00000324 : 07300293  ADDI   rd = 5, rs1 = 0, imm = 0x73
+00000328 : 07800413  ADDI   rd = 8, rs1 = 0, imm = 0x78
+0000032c : 03000493  ADDI   rd = 9, rs1 = 0, imm = 0x30
+00000330 : 01010313  ADDI   rd = 6, rs1 = 2, imm = 0x10
+00000334 : 02d00913  ADDI   rd = 18, rs1 = 0, imm = 0x2d
+00000338 : ffff8f93  ADDI   rd = 31, rs1 = 31, imm = 0xfff
+0000033c : 00900e93  ADDI   rd = 29, rs1 = 0, imm = 0x9
+00000340 : 0200006f  JAL    rd = 32, imm = 0x20
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+00000348 : 00068713  ADDI   rd = 14, rs1 = 13, imm = 0x0
+0000034c : 00f5a023  SW     rs1 = 11, rs2 = 15, imm = 0x0
+00000350 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+00000354 : 00070513  ADDI   rd = 10, rs1 = 14, imm = 0x0
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000360 : 00150693  ADDI   rd = 13, rs1 = 10, imm = 0x1
+00000364 : ffc790e3  BNE    rs1 = 15, rs2 = 28, imm = 0x1fe0
+00000344 : 07078c63  BEQ    rs1 = 15, rs2 = 16, imm = 0x78
+000003bc : 0075a023  SW     rs1 = 11, rs2 = 7, imm = 0x0
+000003c0 : 00054703  LBU    rd = 14, rs1 = 10, imm = 0x0
+000003c4 : 00068793  ADDI   rd = 15, rs1 = 13, imm = 0x0
+000003c8 : 00050693  ADDI   rd = 13, rs1 = 10, imm = 0x0
+000003cc : 00e5a023  SW     rs1 = 11, rs2 = 14, imm = 0x0
+000003d0 : 00078513  ADDI   rd = 10, rs1 = 15, imm = 0x0
+000003d4 : f85ff06f  JAL    rd = 32, imm = 0x1fff84
+00000358 : 0016c783  LBU    rd = 15, rs1 = 13, imm = 0x1
+0000035c : 02078e63  BEQ    rs1 = 15, rs2 = 0, imm = 0x3c
+00000398 : 0ac12403  LW     rd = 8, rs1 = 2, imm = 0xac
+0000039c : 0a812483  LW     rd = 9, rs1 = 2, imm = 0xa8
+000003a0 : 0a412903  LW     rd = 18, rs1 = 2, imm = 0xa4
+000003a4 : 0a012983  LW     rd = 19, rs1 = 2, imm = 0xa0
+000003a8 : 09c12a03  LW     rd = 20, rs1 = 2, imm = 0x9c
+000003ac : 09812a83  LW     rd = 21, rs1 = 2, imm = 0x98
+000003b0 : 00100513  ADDI   rd = 10, rs1 = 0, imm = 0x1
+000003b4 : 0d010113  ADDI   rd = 2, rs1 = 2, imm = 0xd0
+000003b8 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000908 : 00c12083  LW     rd = 1, rs1 = 2, imm = 0xc
+0000090c : 00000513  ADDI   rd = 10, rs1 = 0, imm = 0x0
+00000910 : 01010113  ADDI   rd = 2, rs1 = 2, imm = 0x10
+00000914 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000248 : 2780006f  JAL    rd = 32, imm = 0x278
+000004c0 : ff010113  ADDI   rd = 2, rs1 = 2, imm = 0xff0
+000004c4 : 00000593  ADDI   rd = 11, rs1 = 0, imm = 0x0
+000004c8 : 00812423  SW     rs1 = 2, rs2 = 8, imm = 0x8
+000004cc : 00112623  SW     rs1 = 2, rs2 = 1, imm = 0xc
+000004d0 : 00050413  ADDI   rd = 8, rs1 = 10, imm = 0x0
+000004d4 : 198000ef  JAL    rd = 1, imm = 0x198
+0000066c : fd010113  ADDI   rd = 2, rs1 = 2, imm = 0xfd0
+00000670 : 000307b7  LUI    rd = 15, imm = 0x30
+00000674 : 01412c23  SW     rs1 = 2, rs2 = 20, imm = 0x18
+00000678 : 6387aa03  LW     rd = 20, rs1 = 15, imm = 0x638
+0000067c : 03212023  SW     rs1 = 2, rs2 = 18, imm = 0x20
+00000680 : 02112623  SW     rs1 = 2, rs2 = 1, imm = 0x2c
+00000684 : 148a2903  LW     rd = 18, rs1 = 20, imm = 0x148
+00000688 : 02812423  SW     rs1 = 2, rs2 = 8, imm = 0x28
+0000068c : 02912223  SW     rs1 = 2, rs2 = 9, imm = 0x24
+00000690 : 01312e23  SW     rs1 = 2, rs2 = 19, imm = 0x1c
+00000694 : 01512a23  SW     rs1 = 2, rs2 = 21, imm = 0x14
+00000698 : 01612823  SW     rs1 = 2, rs2 = 22, imm = 0x10
+0000069c : 01712623  SW     rs1 = 2, rs2 = 23, imm = 0xc
+000006a0 : 01812423  SW     rs1 = 2, rs2 = 24, imm = 0x8
+000006a4 : 04090063  BEQ    rs1 = 18, rs2 = 0, imm = 0x40
+000006a8 : 00050b13  ADDI   rd = 22, rs1 = 10, imm = 0x0
+000006ac : 00058b93  ADDI   rd = 23, rs1 = 11, imm = 0x0
+000006b0 : 00100a93  ADDI   rd = 21, rs1 = 0, imm = 0x1
+000006b4 : fff00993  ADDI   rd = 19, rs1 = 0, imm = 0xfff
+000006b8 : 00492483  LW     rd = 9, rs1 = 18, imm = 0x4
+000006bc : fff48413  ADDI   rd = 8, rs1 = 9, imm = 0xfff
+000006c0 : 02044263  BLT    rs1 = 8, rs2 = 0, imm = 0x24
+000006c4 : 00249493  SLLI   rd = 9, rs1 = 9, shamt =2
+000006c8 : 009904b3  ADD    rd = 9, rs1 = 18, rs2 =9
+000006cc : 040b8463  BEQ    rs1 = 23, rs2 = 0, imm = 0x48
+00000714 : 00492783  LW     rd = 15, rs1 = 18, imm = 0x4
+00000718 : 0044a683  LW     rd = 13, rs1 = 9, imm = 0x4
+0000071c : fff78793  ADDI   rd = 15, rs1 = 15, imm = 0xfff
+00000720 : 04878e63  BEQ    rs1 = 15, rs2 = 8, imm = 0x5c
+0000077c : 00892223  SW     rs1 = 18, rs2 = 8, imm = 0x4
+00000780 : fa9ff06f  JAL    rd = 32, imm = 0x1fffa8
+00000728 : fa0688e3  BEQ    rs1 = 13, rs2 = 0, imm = 0x1fb0
+0000072c : 18892783  LW     rd = 15, rs1 = 18, imm = 0x188
+00000730 : 008a9733  SLL    rd = 14, rs1 = 21, rs2 =8
+00000734 : 00492c03  LW     rd = 24, rs1 = 18, imm = 0x4
+00000738 : 00f777b3  AND    rd = 15, rs1 = 14, rs2 =15
+0000073c : 02079263  BNE    rs1 = 15, rs2 = 0, imm = 0x24
+00000740 : 000680e7  JALR   rd = 1, rs1 = 13, imm = 0x0
+000007a4 : ff010113  ADDI   rd = 2, rs1 = 2, imm = 0xff0
+000007a8 : 00812423  SW     rs1 = 2, rs2 = 8, imm = 0x8
+000007ac : 000007b7  LUI    rd = 15, imm = 0x0
+000007b0 : 00000437  LUI    rd = 8, imm = 0x0
+000007b4 : 00040413  ADDI   rd = 8, rs1 = 8, imm = 0x0
+000007b8 : 00078793  ADDI   rd = 15, rs1 = 15, imm = 0x0
+000007bc : 408787b3  SUB    rd = 15, rs1 = 15, rs2 =8
+000007c0 : 00912223  SW     rs1 = 2, rs2 = 9, imm = 0x4
+000007c4 : 00112623  SW     rs1 = 2, rs2 = 1, imm = 0xc
+000007c8 : 4027d493  SRAI   rd = 9, rs1 = 15, shamt =2
+000007cc : 02048063  BEQ    rs1 = 9, rs2 = 0, imm = 0x20
+000007ec : 00c12083  LW     rd = 1, rs1 = 2, imm = 0xc
+000007f0 : 00812403  LW     rd = 8, rs1 = 2, imm = 0x8
+000007f4 : 00412483  LW     rd = 9, rs1 = 2, imm = 0x4
+000007f8 : 01010113  ADDI   rd = 2, rs1 = 2, imm = 0x10
+000007fc : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+00000744 : 00492703  LW     rd = 14, rs1 = 18, imm = 0x4
+00000748 : 148a2783  LW     rd = 15, rs1 = 20, imm = 0x148
+0000074c : 01871463  BNE    rs1 = 14, rs2 = 24, imm = 0x8
+00000750 : f8f904e3  BEQ    rs1 = 18, rs2 = 15, imm = 0x1f88
+000006d8 : fff40413  ADDI   rd = 8, rs1 = 8, imm = 0xfff
+000006dc : ffc48493  ADDI   rd = 9, rs1 = 9, imm = 0xffc
+000006e0 : ff3416e3  BNE    rs1 = 8, rs2 = 19, imm = 0x1fec
+000006e4 : 02c12083  LW     rd = 1, rs1 = 2, imm = 0x2c
+000006e8 : 02812403  LW     rd = 8, rs1 = 2, imm = 0x28
+000006ec : 02412483  LW     rd = 9, rs1 = 2, imm = 0x24
+000006f0 : 02012903  LW     rd = 18, rs1 = 2, imm = 0x20
+000006f4 : 01c12983  LW     rd = 19, rs1 = 2, imm = 0x1c
+000006f8 : 01812a03  LW     rd = 20, rs1 = 2, imm = 0x18
+000006fc : 01412a83  LW     rd = 21, rs1 = 2, imm = 0x14
+00000700 : 01012b03  LW     rd = 22, rs1 = 2, imm = 0x10
+00000704 : 00c12b83  LW     rd = 23, rs1 = 2, imm = 0xc
+00000708 : 00812c03  LW     rd = 24, rs1 = 2, imm = 0x8
+0000070c : 03010113  ADDI   rd = 2, rs1 = 2, imm = 0x30
+00000710 : 00008067  JALR   rd = 32, rs1 = 1, imm = 0x0
+000004d8 : 000307b7  LUI    rd = 15, imm = 0x30
+000004dc : 6387a503  LW     rd = 10, rs1 = 15, imm = 0x638
+000004e0 : 03c52783  LW     rd = 15, rs1 = 10, imm = 0x3c
+000004e4 : 00078463  BEQ    rs1 = 15, rs2 = 0, imm = 0x8
+000004ec : 00040513  ADDI   rd = 10, rs1 = 8, imm = 0x0
+000004f0 : 3ac000ef  JAL    rd = 1, imm = 0x3ac
+0000089c : 00000593  ADDI   rd = 11, rs1 = 0, imm = 0x0
+000008a0 : 00000613  ADDI   rd = 12, rs1 = 0, imm = 0x0
+000008a4 : 00000693  ADDI   rd = 13, rs1 = 0, imm = 0x0
+000008a8 : 00000713  ADDI   rd = 14, rs1 = 0, imm = 0x0
+000008ac : 00000793  ADDI   rd = 15, rs1 = 0, imm = 0x0
+000008b0 : 05d00893  ADDI   rd = 17, rs1 = 0, imm = 0x5d
+000008b4 : 00000073  ECAL
+000008b8 : 00054463  BLT    rs1 = 10, rs2 = 0, imm = 0x8
+000008bc : 0000006f  JAL    rd = 32, imm = 0x0
