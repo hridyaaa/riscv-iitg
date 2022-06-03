@@ -7,15 +7,15 @@ module CSR(
 		output [31:0] rdata,
 		output vrdata,
 		input [31:0] wdata,
-		input rw,
-		input rs,
-		input rc
+		input rw,//read and write csr
+		input rs,//read and set csr
+		input rc//read and clear csr
     );
 	
 ////////    Read/Write registers   ////////
 	
 	
-	reg [31:0] FFLAGS;
+	reg [31:0] FFLAGS;//Floating-point accrued exceptions.,address h001
 	always@(posedge clk) begin
 		if      (reset) FFLAGS <= 0;
 		else if (rw && imm==12'h001) FFLAGS <= wdata;
@@ -23,7 +23,7 @@ module CSR(
 		else if (rc && imm==12'h001) FFLAGS <= FFLAGS & ~wdata;
 	end
 	
-	reg [31:0] FRM;
+	reg [31:0] FRM;//Floating-point dynamic rounding mode.address=h002
 	always@(posedge clk) begin
 		if      (reset             ) FRM <= 0;
 		else if (rw && imm==12'h002) FRM <= wdata;
@@ -31,7 +31,7 @@ module CSR(
 		else if (rc && imm==12'h002) FRM <= FRM & ~wdata;
 	end
 	
-	reg [31:0] FCAR;
+	reg [31:0] FCAR;//Floating-point control and status register.,address=h003
 	always@(posedge clk) begin
 		if      (             reset) FCAR <= 0;
 		else if (rw && imm==12'h003) FCAR <= wdata;
