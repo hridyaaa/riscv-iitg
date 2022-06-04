@@ -1,6 +1,6 @@
 module DBP#(
-		parameter AWIDTH=10,
-		parameter DWIDTH=34
+		parameter AWIDTH=10,//address width 
+		parameter DWIDTH=34//data width
 )(
 		input clk,
 		input reset,
