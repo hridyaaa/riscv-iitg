@@ -41,7 +41,7 @@ module CSR(
 	
 ////////    Read only registers   ////////
 	
-	reg [63:0] RDCYCLE  ; always@(posedge clk) if (reset) RDCYCLE   <= 0; else RDCYCLE <= RDCYCLE + 1 ;
+	reg [63:0] RDCYCLE  ; always@(posedge clk) if (reset) RDCYCLE   <= 0; else RDCYCLE <= RDCYCLE + 1 ;//counter and timer precision is 64 bits
 	reg [63:0] RDTIME   ; always@(posedge clk) if (reset) RDTIME    <= 0; else RDTIME  <= RDTIME  + 1 ;
 	reg [63:0] RDINSTRET; always@(posedge clk) if (reset) RDINSTRET <= 0; else if (ins_counter_up) RDINSTRET <= RDINSTRET + 1;
 	
