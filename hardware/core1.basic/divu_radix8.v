@@ -1,21 +1,21 @@
 module divu_radix8#(
-	parameter WIDTH = 33
+	parameter WIDTH = 33// 1extra bit for sign
 )(
 	input clk,
 	input reset,
 	input pause,
 	
-	input en,
+	input en,//enable
 	input [WIDTH-1:0] divisor,
 	input [WIDTH-1:0] dividend,      // width should be multiple of 4
 	
 	output ready,
-	output [WIDTH-1:0] q,
-	output [WIDTH-1:0] r,
+	output [WIDTH-1:0] q,//quotient
+	output [WIDTH-1:0] r,//remainder
 	output vout
 );
 
-	// localparam width1 = $clog2(WIDTH) ;
+	// localparam width1 = $clog2(WIDTH) ;//similar to parameter
 	localparam width1 = 8 ;
 	
 	integer index;
@@ -24,7 +24,7 @@ module divu_radix8#(
 	initial msb_count = 0 ;
 	always @* begin // combination logic
 		for(index = 2; index < WIDTH; index = index + 3) begin
-			if(dividend[index]!=0 || dividend[index-1]!=0 || dividend[index-2]!=0 ) begin
+			if(dividend[index]!=0 || dividend[index-1]!=0 || dividend[index-2]!=0 ) begin //tactical move to reduce the number of bits by removing the redundantbits and setting the msb bit to most significant 1
 				msb_count = index;
 			end
 		end
@@ -32,7 +32,7 @@ module divu_radix8#(
 	
 	wire [width1-1:0] shifts = WIDTH - 1 - msb_count;
 	
-	wire [WIDTH-1:0] wire_dividend = dividend << shifts ;
+	wire [WIDTH-1:0] wire_dividend = dividend << shifts ;  //removing the redundant zeros
 
 	reg reg_ready;
 	always@(posedge clk) begin
