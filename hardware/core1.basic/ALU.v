@@ -42,7 +42,7 @@ module ALU(
 	wire [ 4:0]  operand = din2[4:0];
     wire [31:0] wire_sll = din1 << operand;
 	wire [31:0] wire_srl = din1 >> operand;//operand stores the values of no.of shifts.suppose the number of shifts were 4 then operand value will be 4,din1 shifted 4 times and the value will be stored in wire sr1
-    wire [31:0] wire_sra = sign_din1 >>> operand;
+	wire [31:0] wire_sra = sign_din1 >>> operand;//shift and sign extend//original sign is copied in to vacated upper bits by this operation
 	
 	
 	assign dout = ( wire_add_en    ) ? wire_add32 //if wire_add_en=1,do addition operation
