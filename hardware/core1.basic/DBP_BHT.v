@@ -5,11 +5,11 @@ module DBP_BHT #(
 	input clk,
 	input reset,
 
-	input  [AWIDTH-1:0] add1,
-	output [DWIDTH-1:0] rdata1,
+	input  [AWIDTH-1:0] add1,//output of dbp
+	output [DWIDTH-1:0] rdata1,//input of dbp
 	
-	input  [AWIDTH-1:0] add2,
-	output [DWIDTH-1:0] rdata2,
+	input  [AWIDTH-1:0] add2,//output of dbp is input to bht
+	output [DWIDTH-1:0] rdata2,//input to dbp,output of bht
 	input               wen2,
 	input  [DWIDTH-1:0] wdata2
 );
