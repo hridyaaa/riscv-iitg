@@ -10,15 +10,15 @@ module DBP_BHT #(
 	
 	input  [AWIDTH-1:0] add2,//output of dbp is input to bht
 	output [DWIDTH-1:0] rdata2,//input to dbp,output of bht
-	input               wen2,
-	input  [DWIDTH-1:0] wdata2
+	input               wen2,//write enable is a signal frpom dbp,for bht updation
+	input  [DWIDTH-1:0] wdata2//final address by branch prediction was stored in wdata2,which should be updated in bht
 );
 
 	localparam DEPTH = 2**AWIDTH ; 
 	
 	reg [DWIDTH-1:0] ram_memory [DEPTH-1:0];
 	
-	initial $readmemh("./bht_init.hex",ram_memory);
+	initial $readmemh("./bht_init.hex",ram_memory);//for software verification
 	
 	// localparam DWIDTH1 = DWIDTH -1 ;
 	// genvar i;
@@ -34,10 +34,10 @@ module DBP_BHT #(
 	
 	always@(posedge clk) begin
 	  if   (reset) reg_rdata1 <= 32'd0 ;
-	  else         reg_rdata1 <= ram_memory[add1] ;
+	  else         reg_rdata1 <= ram_memory[add1] ;//content of add1 in ram memory is copied to reg data1
 	end
 	
-	assign rdata1 = reg_rdata1 ;
+	assign rdata1 = reg_rdata1 ;//address is copied to r data which is te op of bht
 	
 	// always@(posedge clk) if ( !reset & wen1 ) ram_memory[add1] <= wdata1 ;
 	
@@ -51,7 +51,7 @@ module DBP_BHT #(
 	
 	assign rdata2 = reg_rdata2;
 	
-	always@(posedge clk) if ( !reset & wen2 ) ram_memory[add2] <= wdata2 ;
+	always@(posedge clk) if ( !reset & wen2 ) ram_memory[add2] <= wdata2 ;//new data came,write it in to memory
 	
 endmodule
 	
