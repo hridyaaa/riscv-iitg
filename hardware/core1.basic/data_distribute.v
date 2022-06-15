@@ -7,7 +7,7 @@ module data_distribute(
 	input [31:0] de_rs2     ,
 	input [ 2:0] de_r_wait  ,
 	input [ 5:0] de_r_tag   ,
-	input [14:0] de_r_add   ,
+	input [14:0] de_r_add   ,//inputs for decode stage
 	
 	input        wrd_en1    ,
 	input [6:0]  wrd_add1   ,
@@ -17,10 +17,10 @@ module data_distribute(
 	input [31:0] wrd_data2  ,
 	input        ex_rd_en   ,
 	input [6:0]  ex_rd_add  ,
-	input [31:0] ex_rd_data ,
+	input [31:0] ex_rd_data ,//inputs for execution stage
 	input        mem_rd_en   ,
 	input [6:0]  mem_rd_add  ,
-	input [31:0] mem_rd_data ,
+	input [31:0] mem_rd_data ,//inputs for memory read
 	input        buff_ex_rd_en   ,
 	input [6:0]  buff_ex_rd_add  ,
 	input [31:0] buff_ex_rd_data ,
@@ -28,7 +28,7 @@ module data_distribute(
 	output [31:0] dd_rs1    ,
 	output [31:0] dd_rs2    ,
 	output [ 1:0] dd_rd_tag ,
-	output [ 4:0] dd_rd_add ,
+	output [ 4:0] dd_rd_add ,//data destribusion variables
 	output        dd_pause
 );
 	
