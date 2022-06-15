@@ -5,12 +5,12 @@ module cpu#(
     input clk,
 	input reset,
 	
-	output [31:0] add1  ,
-	input  [31:0] rdata1,
+	output [31:0] add1  ,//OUTPUT OF DBP
+	input  [31:0] rdata1,//input of dbp
 	output [ 3:0] wen1  ,
 	output [31:0] wdata1,
-	output [31:0] add2  ,
-	input  [31:0] rdata2,
+	output [31:0] add2  ,//output of dbp
+	input  [31:0] rdata2,//input of dbp
 	output [ 3:0] wen2  ,
 	output [31:0] wdata2,
 	
