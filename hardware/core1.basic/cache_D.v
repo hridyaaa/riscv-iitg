@@ -5,27 +5,27 @@ module cache_D #(
 	input clk,reset,
 	
 	input  [31:0] add,
-	output [31:0] rdata,
+	output [31:0] rdata,//op from csr
 	input  [ 3:0] wen,//write enable
-	input  [31:0] wdata
+	input  [31:0] wdata//32 bit data
 );
 	
 	reg [31:0] mem [0:DEPTH-1];//made an array
 
-	initial $readmemh("./memory.hex",mem);//readmemh used to initialize memory
+	initial $readmemh("./memory.hex",mem);//readmemh used to initialize memory,for software verification.
 	
 //// ----------------------		Read Channel		-------------------- ////
 	
-	wire [ADD_WIDTH-3:0] mem_add   = add[ADD_WIDTH-1:2] ;//adrress of data to be read or write is stored in mem_add
+	wire [ADD_WIDTH-3:0] mem_add   = add[ADD_WIDTH-1:2] ;//adrress of data to be read is stored in mem_add//16 bit
 	wire [31:0]          mem_rdata = mem[mem_add] ;//data to be read or write is kept in mem_data
 	
 	reg [31:0] reg_rdata;  
 	always@(posedge clk) begin
 	  if   (reset) reg_rdata <= 32'd0;
-	  else         reg_rdata <= mem_rdata;//reading
+	  else         reg_rdata <= mem_rdata;//data is stored in reg_data
 	end
 
-	assign rdata = reg_rdata;//made an array
+	assign rdata = reg_rdata//content of reg_data is stored in rdata
 	
 // ----------------------		Write Channel		-------------------- ////
 	
@@ -37,5 +37,5 @@ module cache_D #(
 	
 	always@(posedge clk) if( !reset & wen!=3'b000 ) mem[mem_add] <= wdata1;//the data is written in to the addressalready given
 	
-endmodule
+endmodule//data will be finally written in the mem[mem_add]
 	
