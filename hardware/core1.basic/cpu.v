@@ -11,8 +11,8 @@ module cpu#(
 	output [31:0] wdata1,
 	output [31:0] add2  ,//output of dbp
 	input  [31:0] rdata2,//input of dbp
-	output [ 3:0] wen2  ,
-	output [31:0] wdata2,
+	output [ 3:0] wen2  ,//write enable for branch prediction
+	output [31:0] wdata2,//final result of branch prediction will be stored in wdata2
 	
 	output [AWIDTH_DBP-1:0] dbp_add1  ,
 	input  [DWIDTH_DBP-1:0] dbp_rdata1,
