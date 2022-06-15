@@ -37,5 +37,5 @@ module cache_I #(
 	
 	always@(posedge clk) if( !reset & wen!=3'b000 ) mem[mem_add] <= wdata1;
 	
-endmodule
+endmodule//similar to cache D
 	
