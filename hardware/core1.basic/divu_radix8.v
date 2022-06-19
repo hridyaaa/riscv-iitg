@@ -38,32 +38,32 @@ module divu_radix8#(
 	always@(posedge clk) begin
 	    if      ( reset ) reg_ready <= 1; 
 		else if ( vout  ) reg_ready <= 1; 
-		else if ( en    ) reg_ready <= 0; 
+		else if ( en    ) reg_ready <= 0; //DIvision starts only if reg_ready=0
 	end
 	
 	assign ready = reg_ready;
 	
 	wire init = en & ready;
 	
-	reg [WIDTH-1  :0] reg_divisor;
-	reg [2*WIDTH-1:0] reg_dividend;
+	reg [WIDTH-1  :0] reg_divisor;//33 bits divisor stored here
+	reg [2*WIDTH-1:0] reg_dividend;//66 bits dividend stored here
 	
-	reg [WIDTH-1  :0] reg_q;
+	reg [WIDTH-1  :0] reg_q;//33 bits quotient is stored here
 	
-	wire [2:0] wire_q0 ;
+	wire [2:0] wire_q0 ;//
 	
 	wire [WIDTH-1:0] wire_d1 ;
-	wire [WIDTH-4:0] wire_d0 = reg_dividend[WIDTH-4:0] ;
+	wire [WIDTH-4:0] wire_d0 = reg_dividend[WIDTH-4:0] ;//30 bit
 	
 	always@(posedge clk) begin
 		if (reset) begin
 			reg_divisor  <= {WIDTH{1'b0}} ;
 			reg_dividend <= {(2*WIDTH){1'b0}};
-			reg_q        <= {WIDTH{1'b0}};
+			reg_q        <= {WIDTH{1'b0}};//reset condition
 		end else if (init) begin
 			reg_divisor  <= divisor ;
 			reg_dividend <= {{WIDTH{1'b0}}, wire_dividend} ;
-			reg_q        <= {WIDTH{1'b0}};
+			reg_q        <= {WIDTH{1'b0}};//initially
 		end else begin
 			reg_dividend <= {wire_d1, wire_d0, 3'd0} ;
 			reg_q        <= {reg_q[WIDTH-4:0], wire_q0} ;
@@ -71,16 +71,16 @@ module divu_radix8#(
 	end
 	
 	wire [WIDTH+2:0] wire_b   = reg_divisor       ;
-	wire [WIDTH+2:0] wire_2b  = reg_divisor << 1  ;
-	wire [WIDTH+2:0] wire_3b  = wire_b + wire_2b  ;
-	wire [WIDTH+2:0] wire_4b  = reg_divisor << 2  ;
+	wire [WIDTH+2:0] wire_2b  = reg_divisor << 1  ;//2* divisor
+	wire [WIDTH+2:0] wire_3b  = wire_b + wire_2b  ;//3*divisor
+	wire [WIDTH+2:0] wire_4b  = reg_divisor << 2  ;//4*divisor
 	wire [WIDTH+2:0] wire_5b  = wire_4b + wire_b  ;
 	wire [WIDTH+2:0] wire_6b  = wire_4b + wire_2b ;
-	wire [WIDTH+2:0] wire_7b  = wire_4b + wire_3b ;
+	wire [WIDTH+2:0] wire_7b  = wire_4b + wire_3b ;//7*divisor
 	
-	wire [WIDTH+2:0] wire_a = { reg_dividend[(2*WIDTH-1):WIDTH-3] } ;
+	wire [WIDTH+2:0] wire_a = { reg_dividend[(2*WIDTH-1):WIDTH-3] } ;//higher 36 msb  bits of dividend
 	
-	wire [WIDTH+2:0] wire_s   =   wire_a - wire_b ;
+	wire [WIDTH+2:0] wire_s   =   wire_a - wire_b ;//dividend-multiples of divisor
 	wire [WIDTH+2:0] wire_2s  =   wire_a - wire_2b ;
 	wire [WIDTH+2:0] wire_3s  =   wire_a - wire_3b ;
 	wire [WIDTH+2:0] wire_4s  =   wire_a - wire_4b ;
@@ -115,7 +115,7 @@ module divu_radix8#(
 	always@(posedge clk) begin
 		if      ( reset  ) count <= 32'hffffffff;
 		else if ( init   ) count <= 0;
-		else if ( !ready ) count <= count + 3;
+		else if ( !ready ) count <= count + 3;//taking 3 bits and operating
 	end
 	
 	// assign q    = wire_15b ;
